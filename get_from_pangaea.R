@@ -1,7 +1,7 @@
 # 
 # Import data directly from the internet, via screen-scraping, then
 # generate a quick plot in R
-# $Id: get_from_pangaea.R 3350 2013-02-14 13:34:04Z knb $
+# $Id: get_from_pangaea.R 3351 2013-02-14 15:25:07Z knb $
 # 
 # developed for ggplot2 0.8.9
 # also works on ggplot2 0.9.3
