@@ -3,7 +3,8 @@
 # generate a quick plot in R
 # $Id: get_from_pangaea.R 3350 2013-02-14 13:34:04Z knb $
 # 
-# 
+# developed for ggplot2 0.8.9
+# also works on ggplot2 0.9.3
 
 library("XML")
 library(RCurl)
@@ -19,9 +20,12 @@ theurl <- "http://doi.pangaea.de/10.1594/PANGAEA.772960?format=html"
 n1 = 2
 n2 = 1
 
+#where to place long intra-panel text?, origin 
 tx = -7.5
-ty = -11000
+ty = -12100
 
+
+outfile="rehwiese.jpg"
 #
 # delta O-18 of foraminifers from the central atlantic
 # choose 
@@ -78,3 +82,4 @@ p = p + annotate("text", x = tx, y = ty, label = wrapper(citation, width=50)) #+
 
 #p + theme_bw()
 print(p)
+ggsave(file=outfile, dpi=72)
