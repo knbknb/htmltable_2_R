@@ -10,7 +10,3 @@ Then a simple plot is generated.
 Geological data are fetched from the science-data repository http://pangaea.de, using curl
 
 Then a simple X-Y plot is generated. A sample outfile (in JPG Format) is attached.
-
-For other data sets from pangaea, other columns must be plotted. 
-
-At this time, only a single column is plotted.
