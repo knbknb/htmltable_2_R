@@ -14,3 +14,6 @@ Then a simple X-Y plot is generated. A sample outfile (in JPG Format) is attache
 For other data sets from pangaea, other columns must be plotted. 
 
 At this time, only a single column is plotted.
+
+The sample dataset was chosen because it is from the Berlin/Brandenburg area, 
+it is simple+small, it is easy to understand, and has some relevance to my work.
