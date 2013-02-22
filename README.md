@@ -11,12 +11,12 @@ select the HTML table on the page with an xpath expression, create a data frame,
 
 At this time, only a single column is plotted.
 
-The sample dataset was chosen because it is from the Berlin/Brandenburg area, 
-it is simple+small, it is easy to understand, and has some relevance to my work.
+The sample dataset - ages of sediment layers  from Lake Rehwiese near the Berlin/Brandenburg area- 
+ is simple+small, it is easy to understand, and has some relevance to my work.
 
 For other data sets from pangaea.de, other columns must be selected and plotted - Must adapt the source code. 
 
-A sample outfile (in JPG Format) is attached.
+A sample [outfile (in JPG Format)](/rehwiese.jpg) is attached.
 
 Todo: make the xpath-expression, and the selection of columns a command line option
 
