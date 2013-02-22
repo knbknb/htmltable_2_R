@@ -1,16 +1,13 @@
 htmltable_2_R
 =============
-Another learning experience for me.
 
-Import data directly from the internet, via screen-scraping, then generate a quick plot in R.
+**This simple R script is just a proof-of-concept of getting web-data into R. Another learning experience for me.**
 
-This simple R script is just a proof-of-concept of how to get web data into R. 
+Import science-data directly from the internet, via screen-scraping, then generate a simple X-Y-scatterplot using the qplot() function of the popular *gglot2* library.
 
-Then a simple plot is generated with the popular gglot2 library.
+Geological data are fetched from the science-data repository http://pangaea.de, using *Rcurl*.
 
-Geological data are fetched from the science-data repository http://pangaea.de, using curl
-
-select the HTML table on the page with an xpath expression, create a data frame, generate a simple X-Y plot. 
+select the HTML table on the page with an xpath expression, create a data frame, generate the simple X-Y plot. 
 
 At this time, only a single column is plotted.
 
