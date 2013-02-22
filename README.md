@@ -1,11 +1,12 @@
 htmltable_2_R
 =============
+Another learning experience for me.
 
 Import data directly from the internet, via screen-scraping, then generate a quick plot in R.
 
 This simple R script is just a proof-of-concept of how to get web data into R. 
 
-Then a simple plot is generated.
+Then a simple plot is generated with the popular gglot2 library.
 
 Geological data are fetched from the science-data repository http://pangaea.de, using curl
 
