@@ -9,7 +9,7 @@ Geological data are fetched from the science-data repository http://pangaea.de, 
 At this time, only a single column is plotted.
 
 The sample dataset - ages of sediment layers  from Lake Rehwiese near the Berlin/Brandenburg area- 
- is simple+small. The data is easy to understand, and has some relevance to my work.
+ is simple+small. This geochronology data is easy to understand, and has some relevance to my work.
 
 For other data sets from pangaea.de, or to select other columns: - Must change the source code. There is no other way at this time.
 
