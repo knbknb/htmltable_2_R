@@ -1,11 +1,11 @@
 htmltable_2_R
 =============
 
-**This simple R script from 2013 is about learning to get web-data into R, and to create plots. Quite an experience for me, back when I just started using R.**
+**This simple R script from 2013, when I was learning to get web-data into R, and to create plots. Quite an experience for me, back when I just started using R.**
 
-Import science-data directly from the internet, via screen-scraping, then generate a simple X-Y-scatterplot using the qplot() function of the popular *gglot2* library. *(Update 2017: I would do this differently now)*
+There is just one R script. It imports environmental science-data (~ 1kB) directly from the internet, via screen-scraping, then generate a simple X-Y-scatterplot using the qplot() function of the popular *gglot2* library. *(Update 2017: I would do this differently now)*
 
-Geological data are fetched from the science-data repository http://pangaea.de, using *Rcurl*. The R code selects the HTML table on the page with an xpath expression, creates a data frame, generates the simple X-Y plot. 
+Geological data are fetched from the science-data repository https://pangaea.de, using *Rcurl*. The R code selects the HTML table on the page with an xpath expression, creates a data frame, generates the simple X-Y plot. 
 At this time, only a single column is plotted.
 
 The sample dataset - ages of sediment layers  from Lake Rehwiese near the Berlin/Brandenburg area- 
