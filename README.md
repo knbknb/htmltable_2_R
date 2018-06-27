@@ -11,7 +11,7 @@ At this time, only a single column is plotted.
 The sample dataset - ages of sediment layers  from Lake Rehwiese near the Berlin/Brandenburg area- 
  is simple+small. This geochronology data is easy to understand, and has some relevance to my work.
 
-For other data sets from pangaea.de, or to select other columns: - Must change the source code. There is no other way at this time.
+For other data sets from pangaea.de, or to select other columns: - Must change the source code, or use [ROpenSci's `pangaear` package](https://ropensci.github.io/pangaear/).
 
 A sample [outfile (in JPG Format)](/rehwiese.jpg) is attached. 
 
