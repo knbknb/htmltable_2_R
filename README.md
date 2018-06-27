@@ -24,5 +24,5 @@ A sample [outfile (in JPG Format), from 2013](/rehwiese.jpg) is attached.
 Again, I was not involved in creating this dataset, I just selected it because of its small size and simple structure. I'm not interpreting the data here. 
 
 
-Todo: make the xpath-expression, and the selection of columns in the plot, a command line option. Flip the coordinate axes. 
+Todo: make the xpath-expression, and the selection of columns in the plot, a command line option. ~~Flip the coordinate axes~~. 
 
