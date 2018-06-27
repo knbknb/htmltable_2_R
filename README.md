@@ -8,14 +8,18 @@ There is just one R script. It imports environmental science-data (~ 1kB) direct
 Geological data are fetched from the science-data repository https://pangaea.de, using *Rcurl*. The R code selects the HTML table on the page with an xpath expression, creates a data frame, generates the simple X-Y plot. 
 At this time, only a single column is plotted.
 
-The sample dataset - ages of sediment layers  from Lake Rehwiese near the Berlin/Brandenburg area- 
+The [sample dataset](https://doi.pangaea.de/10.1594/PANGAEA.772960?format=html) - ages of sediment layers  from Lake Rehwiese in the Berlin/Brandenburg area- 
  is simple+small. This geochronology data is easy to understand, and has some relevance to my work.
 
 For other data sets from pangaea.de, or to select other columns: - Must change the source code, or use [ROpenSci's `pangaear` package](https://ropensci.github.io/pangaear/).
 
-A sample [outfile (in JPG Format)](/rehwiese.jpg) is attached. 
+A sample [outfile (in JPG Format), from 2013](/rehwiese.jpg) is attached. 
 
-![Plot](rehwiese.jpg)
+![Plots](rehwiese.jpg)
+
+
+ 
+![Current output (from 2018)](rehwiese_coordflipped.jpg)
 
 Again, I was not involved in creating this dataset, I just selected it because of its small size and simple structure. I'm not interpreting the data here. 
 

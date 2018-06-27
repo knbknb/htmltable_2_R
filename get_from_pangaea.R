@@ -6,7 +6,7 @@
 # developed for ggplot2 0.8.9
 # also works on ggplot2 0.9.3
 
-setwd("~/code/git/_my/R_one_offs/htmltable_2_R")
+setwd("~/code/git/_my/htmltable_2_R")
 
 library("XML")
 library(RCurl)
@@ -36,7 +36,7 @@ n2 = 1
 
 
 
-outfile="rehwiese.jpg"
+outfile="rehwiese_coordflipped.jpg"
 #
 # delta O-18 of foraminifers from the central atlantic
 # choose
@@ -57,7 +57,7 @@ pagetree <- htmlTreeParse(webpage, useInternalNodes = TRUE) #error=function(...)
 # //div[@class='MetaHeaderItem']/big/text()
 
 # For pangaea, these are constant as of 2013
-citation <- xpathSApply(pagetree, "//div[@class='MetaHeaderItem']/big", xmlValue)
+citation <- xpathSApply(pagetree, "//div[@class='MetaHeaderItem']", xmlValue)
 #citation <- iconv(enc2utf8(citation), sub = "byte")
 title <- "Data from www.pangaea.de"  #xpathSApply(pagetree, "//div[@class='MetaHeaderItem']/big/text()", function(x) xmlValue(x))
 tablehead <- xpathSApply(pagetree, "//table[1]//tr/th/span", function(x) xmlValue(x))
@@ -87,16 +87,22 @@ ylabel = colnames(content)[n1]
 #opts(axis.text.y=theme_text(size=10))
 title <- paste0(title, ", n = ", nrow(content), " measurements", "\n", theurl)
 #where to place long intra-panel text?, origin
-ty = -7.5 - 0.5
-tx = 11900
+#ty = -7.5 - 0.5
+#tx = 11900
 
-# xmin=0, ymax=0,
-p <- qplot(  y, -x, ylab= xlabel, xlab= ylabel, main = wrapper(title, width=26))
-p = p + annotate("text", x = tx, y = ty, label = wrapper(citation, width=50)) #+ guides(colour = guide_legend(title.hjust = 0.5))
+p <- qplot(x, y, color=I("tomato"), size=I(0.5),
+           ylab = xlabel, xlab = ylabel,
+           main = wrapper(title, width = 26))
+p <- p + coord_flip() + scale_x_reverse()
+#p <- p + annotate("text", x = tx, y = ty, label = wrapper(citation, width = 50)) #+ guides(colour = guide_legend(title.hjust = 0.5))
 # optional.. add
-p <- p +   geom_smooth(method=lm, se=TRUE)     # Add linear regression line
-p <- p  + geom_text(aes(y = -min(x), x = max(y)-300, label = lm_eqn(data.frame(content))), parse = TRUE)
-#p + theme_bw()
+p <- p + geom_smooth(method = lm, se = FALSE, size=0.5) # Add linear regression line
+# the equation label - very confusing with coords flipped
+#p <- p + geom_text(aes(y = 12000, x = 8 ,#max(y) - 300
+#                       label = lm_eqn(data.frame(content))), parse = TRUE) #p + theme_bw()
+p <- p + geom_text(aes(y = 12000, x = 8.25 ,#max(y) - 300
+                       label = "Sedimentation Rate: ~1.25 mm/year (2000mm/1500 yr)")) #p + theme_bw()
+
 print(p)
-#ggsave(file=outfile, dpi=72)
+ggsave(file=outfile, dpi=72)
 
