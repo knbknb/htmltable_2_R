@@ -29,7 +29,7 @@ wrapper <- function(x, ...) paste(strwrap(x, ...), collapse = "\n")
 #theurl <- "http://en.wikipedia.org/wiki/Brazil_national_football_team"
 # extract a record from pangaes
 # Lake Rehwiese near Berlin, col 1 ,2   ages vs depth
-theurl <- "http://doi.pangaea.de/10.1594/PANGAEA.772960?format=html"
+theurl <- "https://doi.pangaea.de/10.1594/PANGAEA.772960?format=html"
 n1 = 2
 n2 = 1
 
@@ -60,8 +60,8 @@ pagetree <- htmlTreeParse(webpage, useInternalNodes = TRUE) #error=function(...)
 citation <- xpathSApply(pagetree, "//div[@class='MetaHeaderItem']/big", xmlValue)
 #citation <- iconv(enc2utf8(citation), sub = "byte")
 title <- "Data from www.pangaea.de"  #xpathSApply(pagetree, "//div[@class='MetaHeaderItem']/big/text()", function(x) xmlValue(x))
-tablehead <- xpathSApply(pagetree, "//table[2]//tr/th/span", function(x) xmlValue(x))
-results <- xpathSApply(pagetree, "//table[2]//tr/td", function(x) xmlValue(x))
+tablehead <- xpathSApply(pagetree, "//table[1]//tr/th/span", function(x) xmlValue(x))
+results <- xpathSApply(pagetree, "//table[1]//tr/td", function(x) xmlValue(x))
 
 # Convert character vector to dataframe
 
@@ -79,8 +79,6 @@ head(content)
 summary(content)
 
 
-
-rm(p)
 x <- content[,n2]
 y <- content[,n1]
 xlabel = colnames(content)[n2]
