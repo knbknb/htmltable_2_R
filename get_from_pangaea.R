@@ -91,7 +91,7 @@ title <- paste0(title, ", n = ", nrow(content), " measurements", "\n", theurl)
 #tx = 11900
 
 p <- qplot(x, y, color=I("tomato"), size=I(0.5),
-           ylab = xlabel, xlab = ylabel,
+           ylab = ylabel, xlab = xlabel,
            main = wrapper(title, width = 26))
 p <- p + coord_flip() + scale_x_reverse()
 #p <- p + annotate("text", x = tx, y = ty, label = wrapper(citation, width = 50)) #+ guides(colour = guide_legend(title.hjust = 0.5))
