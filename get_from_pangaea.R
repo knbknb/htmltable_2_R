@@ -101,7 +101,7 @@ p <- p + geom_smooth(method = lm, se = FALSE, size=0.5) # Add linear regression 
 #p <- p + geom_text(aes(y = 12000, x = 8 ,#max(y) - 300
 #                       label = lm_eqn(data.frame(content))), parse = TRUE) #p + theme_bw()
 p <- p + geom_text(aes(y = 12000, x = 8.25 ,#max(y) - 300
-                       label = "Sedimentation Rate: ~1.25 mm/year (2000mm/1500 yr)")) #p + theme_bw()
+                       label = "Sedimentation Rate: ~1.33 mm/year (2000mm/1500 yr)")) #p + theme_bw()
 
 print(p)
 ggsave(file=outfile, dpi=72)
